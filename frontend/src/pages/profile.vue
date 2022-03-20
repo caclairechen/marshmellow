@@ -2,7 +2,9 @@
   <div id="app">
     <Navigation />
     <span>My Profile</span>
-    <div>{{ users }}</div>
+    <div v-for="user in users" v-bind:key="user.id">
+      <h2>{{ user.name }}</h2>
+    </div>
   </div>
 </template>
 
