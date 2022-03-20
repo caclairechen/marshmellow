@@ -69,6 +69,7 @@ public class PetsController : ControllerBase
     public async Task<ActionResult> CreatePet(int userId, PetModel petModel)
     {
         var pet = _mapper.Map<Pet>(petModel);
+        pet.Gender = petModel.Gender == "Male" ? GenderType.Male : GenderType.Female;
         pet.OwnerId = userId;
 
         _dbcontext.Pets.Add(pet);
@@ -95,7 +96,7 @@ public class PetsController : ControllerBase
         pet.Name = petModel.Name;
         pet.OwnerId = petModel.OwnerId;
         pet.Age = petModel.Age;
-        pet.Gender = petModel.Gender;
+        pet.Gender = petModel.Gender == "Male" ? GenderType.Male : GenderType.Female;
         pet.Species = petModel.Species;
 
         try

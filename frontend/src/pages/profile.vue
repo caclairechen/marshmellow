@@ -1,11 +1,13 @@
 <template>
-  <div id="app">
-    <Navigation />
-    <span>My Profile</span>
-    <div v-for="user in users" v-bind:key="user.id">
-      <h2>{{ user.name }}</h2>
+  <v-app>
+    <div data-app id="app">
+      <Navigation />
+      <span>My Profile</span>
+      <div v-for="user in users" v-bind:key="user.id">
+        <h2>{{ user.name }}</h2>
+      </div>
     </div>
-  </div>
+  </v-app>
 </template>
 
 <script>
@@ -25,6 +27,3 @@ export default {
   },
 };
 </script>
-<style lang="scss">
-@import "@/styles.scss";
-</style>

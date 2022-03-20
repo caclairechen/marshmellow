@@ -1,19 +1,21 @@
 <template>
-  <div id="app">
-    <Navigation />
-    <span>My Pets</span>
-  </div>
+  <v-app>
+    <div data-app id="app">
+      <Navigation />
+      <span>My Pets</span>
+      <AddPet />
+    </div>
+  </v-app>
 </template>
 
 <script>
 import Navigation from "@/components/Navigation.vue";
+import AddPet from "@/components/AddPet.vue";
 
 export default {
   components: {
     Navigation,
+    AddPet,
   },
 };
 </script>
-<style lang="scss">
-@import "@/styles.scss";
-</style>

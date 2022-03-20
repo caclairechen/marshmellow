@@ -1,8 +1,10 @@
 <template>
-  <div id="app">
-    <Navigation />
-    <span>Home</span>
-  </div>
+  <v-app>
+    <div data-app id="app">
+      <Navigation />
+      <span>Home</span>
+    </div>
+  </v-app>
 </template>
 
 <script>
@@ -18,7 +20,3 @@ export default {
   }),
 };
 </script>
-
-<style lang="scss">
-@import "@/styles.scss";
-</style>
