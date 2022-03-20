@@ -1,5 +1,5 @@
 import Vue from "vue";
-import page from "@/pages/cafe.vue";
+import page from "@/pages/cafes.vue";
 import vuetify from "@/plugins/vuetify";
 
 Vue.config.productionTip = false;
